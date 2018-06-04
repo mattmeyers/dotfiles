@@ -2,7 +2,7 @@
 ;   Setting Colors
 ;=====================================================
 [colors]
-background = #ffffffff
+background = #000000ff
 primary = #000
 disabled = #aaa
 charging = #ffb52a
@@ -45,6 +45,20 @@ tray-padding = 2
 ;=====================================================
 ;   Creating Modules
 ;=====================================================
+[module/date]
+type = internal/date
+interval = 1
+
+date = " %m-%d"
+time = %H:%M
+
+format-prefix = 
+format-prefix-foreground = ${colors.primary}
+format-underline = ${colors.primary}
+
+label-foreground = ${colors.primary}
+label = %date% %time%
+
 [module/i3]
 type = internal/i3
 format = <label-state> <label-mode>
@@ -84,6 +98,19 @@ ws-icon-4 = 5;
 ws-icon-5 = 6;
 ws-icon-default = 
 
+[module/volume]
+type = internal/volume
+
+format-volume-underline = ${colors.primary}
+format-volume = <label-volume>
+label-volume =  %percentage%%
+label-volume-foreground = ${colors.primary}
+
+format-muted-underline = ${colors.disabled}
+format-muted = <label-muted>
+format-muted-foreground = ${colors.disabled}
+label-muted =  muted
+
 [module/wlan]
 type = internal/network
 interface = wlp3s0
@@ -99,34 +126,6 @@ format-disconnected-underline = ${colors.disabled}
 label-disconnected =  disconnected
 label-disconnected-foreground = ${colors.disabled}
 
-[module/date]
-type = internal/date
-interval = 1
-
-date = " %m-%d"
-time = %H:%M
-
-format-prefix = 
-format-prefix-foreground = ${colors.primary}
-format-underline = ${colors.primary}
-
-label-foreground = ${colors.primary}
-label = %date% %time%
-
-[module/volume]
-type = internal/volume
-
-format-volume-underline = ${colors.primary}
-format-volume = <label-volume>
-label-volume =  %percentage%%
-label-volume-foreground = ${colors.primary}
-
-format-muted-underline = ${colors.disabled}
-format-muted = <label-muted>
-format-muted-foreground = ${colors.disabled}
-label-muted =  muted
-
-
 [module/battery]
 type = internal/battery
 battery = BAT0
@@ -140,6 +139,7 @@ label-charging-foreground = ${colors.primary}
 
 format-discharging = <ramp-capacity> <label-discharging>
 format-discharging-underline = ${colors.primary}
+;format-discharging-2-underline = ${colors.alert}
 label-discharging-foreground = ${colors.primary}
 
 format-full-prefix = ""
@@ -149,6 +149,7 @@ format-full-underline = ${colors.primary}
 ramp-capacity-4 = 
 ramp-capacity-3 = 
 ramp-capacity-2 = 
+;ramp-capacity-2-underline = ${colors.alert}
 ramp-capacity-1 = 
 ramp-capacity-0 = 
 ramp-capacity-foreground = ${colors.primary}
