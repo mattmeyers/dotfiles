@@ -188,6 +188,7 @@ mode "$mode_system" {
 bindsym $mod+q mode "$mode_system"
 
 exec --no-startup-id feh --bg-center /home/matt/.config/i3/wallpapers/NatureDeer.jpg
+exec --no-startup-id compton --config ~/.config/compton/compton.conf -b
 
 #exec --no-startup-id urxvt -name "terminal_scratchpad" -geometry 40x15
 #for_window [instance="terminal_scratchpad"] floating enable; move scratchpad; scratchpad show; move position 1230px 40px; move scratchpad
