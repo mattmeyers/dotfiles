@@ -57,7 +57,7 @@ format-prefix-foreground = ${colors.primary}
 format-underline = ${colors.primary}
 
 label-foreground = ${colors.primary}
-label = %date% %time%
+label = %date% || %time%
 
 [module/i3]
 type = internal/i3
@@ -139,19 +139,17 @@ label-charging-foreground = ${colors.primary}
 
 format-discharging = <ramp-capacity> <label-discharging>
 format-discharging-underline = ${colors.primary}
-;format-discharging-2-underline = ${colors.alert}
 label-discharging-foreground = ${colors.primary}
 
 format-full-prefix = ""
 format-full-prefix-foreground = ${colors.primary}
 format-full-underline = ${colors.primary}
 
-ramp-capacity-4 = 
-ramp-capacity-3 = 
-ramp-capacity-2 = 
-;ramp-capacity-2-underline = ${colors.alert}
-ramp-capacity-1 = 
 ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
 ramp-capacity-foreground = ${colors.primary}
 
 animation-charging-0 = 

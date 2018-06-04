@@ -1,0 +1,53 @@
+#================================#
+#    General
+#================================#
+alias sa='source $HOME/dotfiles/bash/aliases'
+alias sb='source $HOME/dotfiles/bash/bashrc'
+alias sshconfig='vim $HOME/.ssh/config'
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+
+#================================#
+#    Navigation
+#================================#
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias .....='cd ../../../..'
+
+alias dl='cd $HOME/Downloads'
+alias doc='cd $HOME/Documents'
+alias dev='cd $HOME/Documents/Development'
+alias dot='cd $HOME/dotfiles'
+alias drop='cd $HOME/Dropbox'
+alias ap='cd /etc/apache2'
+
+#================================#
+#    Listing
+#================================#
+alias ls='ls --color=auto'
+alias l='ls'
+alias ll='ls -l'
+alias la='ls -la'
+alias ltr='ls -ltr'
+
+#================================#
+#    Apache
+#================================#
+alias apon='sudo apachectl start'
+alias apoff='sudo apachectl stop'
+alias apre='sudo apachectl restart'
+alias apstat='systemctl status apache2.service'
+alias apes='sudo a2ensite'
+alias apds='sudo a2dissite'
+alias apem='sudo a2enmod'
+alias apdm='sudo a2dismod'
+
+#================================#
+#    Programming
+#================================#
+alias py2='/usr/bin/python'
+alias py3='/usr/bin/python3'
