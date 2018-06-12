@@ -139,9 +139,9 @@ exec --no-startup-id feh --bg-center /home/matt/.config/i3/wallpapers/NatureDeer
 exec --no-startup-id compton --config ~/.config/compton/compton.conf -b
 
 # Place terminal in scratchpad on login
-exec --no-startup-id urxvt -name scratchpad -geometry 50x15
-for_window [instance="scratchpad"] move scratchpad
-for_window [instance="scratchpad"] scratchpad show
-for_window [instance="scratchpad"] resize set 685 300
-for_window [instance="scratchpad"] move position 1230px 40px
-for_window [instance="scratchpad"] scratchpad show
+exec --no-startup-id gnome-terminal -t scratchpad
+for_window [title="scratchpad"] move scratchpad
+for_window [title="scratchpad"] scratchpad show
+for_window [title="scratchpad"] resize set 685 300
+for_window [title="scratchpad"] move position 1230px 40px
+for_window [title="scratchpad"] scratchpad show
