@@ -39,9 +39,6 @@ modules-left = date
 modules-center = i3
 modules-right = volume wlan battery
 
-tray-position = right
-tray-padding = 2
-
 ;=====================================================
 ;   Creating Modules
 ;=====================================================

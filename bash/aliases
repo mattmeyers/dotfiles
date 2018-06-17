@@ -22,7 +22,7 @@ alias dl='cd $HOME/Downloads'
 alias doc='cd $HOME/Documents'
 alias dev='cd $HOME/Documents/Development'
 alias dot='cd $HOME/dotfiles'
-alias drop='cd $HOME/Dropbox'
+alias drop='cd $HOME/Documents/Dropbox'
 alias ap='cd /etc/apache2'
 
 #================================#
