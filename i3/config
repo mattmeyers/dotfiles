@@ -13,7 +13,7 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 
 bindsym $mod+Return exec $term
-bindsym $mod+d exec rofi -show drun -theme dracula
+bindsym $mod+d exec "rofi -modi drun,run,ssh -show drun -theme side"
 
 # Power options
 set $mode_system (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
@@ -135,7 +135,7 @@ gaps outer 0
 #   Startup settings
 #=====================================================
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-exec --no-startup-id feh --bg-center /home/matt/.config/i3/wallpapers/NatureDeer.jpg
+exec_always --no-startup-id feh --bg-center /home/matt/.config/i3/wallpapers/DarkTriangles.jpg
 exec --no-startup-id compton --config ~/.config/compton/compton.conf -b
 exec --no-startup-id dropbox start
 
