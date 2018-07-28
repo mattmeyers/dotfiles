@@ -2,7 +2,7 @@
 #   Variable Definitions
 #=====================================================
 set $mod Mod4
-set $term gnome-terminal
+set $term terminator
 
 #=====================================================
 #   Keybindings - General
@@ -134,15 +134,19 @@ gaps outer 0
 #=====================================================
 #   Startup settings
 #=====================================================
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec_always --no-startup-id feh --bg-center /home/matt/.config/i3/wallpapers/DarkTriangles.jpg
-exec --no-startup-id compton --config ~/.config/compton/compton.conf -b
-exec --no-startup-id dropbox start
+#exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+bar {
+	position top
+    status_command i3status
+}
+#exec --no-startup-id compton --config ~/.config/compton/compton.conf -b
+#exec --no-startup-id dropbox start
 
 # Place terminal in scratchpad on login
-exec --no-startup-id gnome-terminal -t scratchpad
-for_window [title="scratchpad"] move scratchpad
-for_window [title="scratchpad"] scratchpad show
-for_window [title="scratchpad"] resize set 685 300
-for_window [title="scratchpad"] move position 1230px 40px
-for_window [title="scratchpad"] scratchpad show
+#exec --no-startup-id gnome-terminal -t scratchpad
+#for_window [title="scratchpad"] move scratchpad
+#for_window [title="scratchpad"] scratchpad show
+#for_window [title="scratchpad"] resize set 685 300
+#for_window [title="scratchpad"] move position 1230px 40px
+#for_window [title="scratchpad"] scratchpad show
