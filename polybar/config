@@ -11,8 +11,35 @@ alert = #bd2c40
 ;=====================================================
 ;   Creating Bars
 ;=====================================================
-[bar/topBar]
-monitor = eDP-1
+[bar/topBarLeft]
+monitor = DVI-D-1
+width = 100%
+height = 27
+fixed-center = true
+
+background = ${colors.background}
+
+line-size = 3
+line-color = #f00
+
+border-size = 4
+border-color = #00000000
+
+padding-left = 13
+padding-right = 13
+
+module-margin-left = 1
+module-margin-right = 2
+
+font-0 = fixed:pixelsize=11.5;1
+font-1 = FontAwesome:size=11;0
+font-2 = FontAwesome5Brands:size=11;0
+
+modules-center = i3
+modules-right = alsa wlan
+
+[bar/topBarRight]
+monitor = DVI-I-1
 width = 100%
 height = 27
 fixed-center = true
@@ -37,7 +64,7 @@ font-2 = FontAwesome5Brands:size=11;0
 
 modules-left = date
 modules-center = i3
-modules-right = volume wlan battery
+
 
 ;=====================================================
 ;   Creating Modules
@@ -60,6 +87,7 @@ label = %date% || %time%
 type = internal/i3
 format = <label-state> <label-mode>
 index-sort = true
+pin-workspaces = true
 
 ; focused = Active workspace on focused monitor
 label-focused = %icon%
@@ -87,12 +115,12 @@ label-urgent-foreground = ${colors.alert}
 label-urget-background = ${colors.background}
 label-urgent-padding = 2
 
-ws-icon-0 = 1;
-ws-icon-1 = 2;
+ws-icon-0 = 1;
+ws-icon-1 = 2;
 ws-icon-2 = 3;
-ws-icon-3 = 4;
-ws-icon-4 = 5;
-ws-icon-5 = 6;
+ws-icon-3 = 4;
+ws-icon-4 = 5;
+ws-icon-5 = 6;
 ws-icon-default = 
 
 [module/volume]
@@ -108,9 +136,26 @@ format-muted = <label-muted>
 format-muted-foreground = ${colors.disabled}
 label-muted =  muted
 
+[module/alsa]
+type = internal/alsa
+
+master-soundcard = hw:0
+speaker-soundcard = hw:0
+headphone-soundcard = hw:0
+
+format-volume-underline = ${colors.primary}
+format-volume = <label-volume>
+label-volume =  %percentage%%
+label-volume-foreground = ${colors.primary}
+
+format-muted-underline = ${colors.disabled}
+format-muted = <label-muted>
+format-muted-foreground = ${colors.disabled}
+label-muted =  muted
+
 [module/wlan]
 type = internal/network
-interface = wlp3s0
+interface = wlp6s0
 interval = 3.0
 
 format-connected = <label-connected>
@@ -122,40 +167,6 @@ format-disconnected = <label-disconnected>
 format-disconnected-underline = ${colors.disabled}
 label-disconnected =  disconnected
 label-disconnected-foreground = ${colors.disabled}
-
-[module/battery]
-type = internal/battery
-battery = BAT0
-adapter = ADP1
-full-at = 99
-poll-interval = 1
-
-format-charging = <animation-charging> <label-charging>
-format-charging-underline = ${colors.charging}
-label-charging-foreground = ${colors.primary}
-
-format-discharging = <ramp-capacity> <label-discharging>
-format-discharging-underline = ${colors.primary}
-label-discharging-foreground = ${colors.primary}
-
-format-full-prefix = ""
-format-full-prefix-foreground = ${colors.primary}
-format-full-underline = ${colors.primary}
-
-ramp-capacity-0 = 
-ramp-capacity-1 = 
-ramp-capacity-2 = 
-ramp-capacity-3 = 
-ramp-capacity-4 = 
-ramp-capacity-foreground = ${colors.primary}
-
-animation-charging-0 = 
-animation-charging-1 = 
-animation-charging-2 = 
-animation-charging-3 = 
-animation-charging-4 = 
-animation-charging-foreground = ${colors.primary}
-animation-charging-framerate = 750
 
 ;=====================================================
 ;   Extra Settings

@@ -4,6 +4,7 @@
 alias sa='source $HOME/dotfiles/bash/aliases'
 alias sb='source $HOME/dotfiles/bash/bashrc'
 alias sshconfig='vim $HOME/.ssh/config'
+alias gitcs='vim $HOME/Documents/Notes/Git/CheatSheet.txt'
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
 alias grep='grep --color=auto'
@@ -20,7 +21,10 @@ alias .....='cd ../../../..'
 
 alias dl='cd $HOME/Downloads'
 alias doc='cd $HOME/Documents'
+alias data='cd $HOME/Documents/Databases'
 alias dev='cd $HOME/Documents/Development'
+alias devt='cd $HOME/Documents/DevTools'
+alias notes='cd $HOME/Documents/Notes'
 alias dot='cd $HOME/dotfiles'
 alias drop='cd $HOME/Documents/Dropbox'
 alias ap='cd /etc/apache2'
@@ -45,6 +49,8 @@ alias apes='sudo a2ensite'
 alias apds='sudo a2dissite'
 alias apem='sudo a2enmod'
 alias apdm='sudo a2dismod'
+alias p56='sudo a2dismod php7.2;sudo a2enmod php5.6;sudo systemctl restart apache2'
+alias p72='sudo a2dismod php5.6;sudo a2enmod php7.2;sudo systemctl restart apache2'
 
 #================================#
 #    Programming
