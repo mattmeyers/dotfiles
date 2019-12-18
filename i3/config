@@ -122,7 +122,7 @@ bindsym XF86MonBrightnessUp exec light -A 5 # increase screen brightness
 bindsym XF86MonBrightnessDown exec light -U 5 # decrease screen brightness
 
 # Enable tap-to-click
-exec --no-startup-id xinput set-prop 12 277 1
+exec --no-startup-id xinput set-prop 12 273 1
 
 #=====================================================
 #   i3-gaps
@@ -135,9 +135,8 @@ gaps outer 0
 #   Startup settings
 #=====================================================
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-exec_always --no-startup-id feh --bg-center /home/matt/.config/i3/wallpapers/DarkTriangles.jpg
+exec_always --no-startup-id feh --bg-center /home/matt/.config/i3/wallpapers/bear_paw.jpg
 exec --no-startup-id compton --config ~/.config/compton/compton.conf -b
-exec --no-startup-id dropbox start
 
 # Place terminal in scratchpad on login
 exec --no-startup-id gnome-terminal -t scratchpad
