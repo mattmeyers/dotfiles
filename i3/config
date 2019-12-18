@@ -124,6 +124,9 @@ bindsym XF86MonBrightnessDown exec light -U 5 # decrease screen brightness
 # Enable tap-to-click
 exec --no-startup-id xinput set-prop 12 273 1
 
+# Map caps lock to super
+exec --no-startup-id setxkbmap -option caps:super
+
 #=====================================================
 #   i3-gaps
 #=====================================================
