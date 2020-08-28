@@ -123,8 +123,10 @@ bindsym $mod+r mode "resize"
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id amixer set Master 1%+ #increase sound volume
 bindsym XF86AudioLowerVolume exec --no-startup-id amixer set Master 1%- #decrease sound volume
-bindsym XF86AudioMute exec --no-startup-id amixer set Master toggle # mute sound
-bindsym XF86AudioPlay exec playerctl play-pause
+bindsym XF86AudioMute exec --no-startup-id amixer -D pulse set Master toggle # mute sound
+bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause
+bindsym XF86AudioPrev exec --no-startup-id playerctl previous
+bindsym XF86AudioNext exec --no-startup-id playerctl next
 
 # Screen brightness controls
 bindsym XF86MonBrightnessUp exec light -A 5 # increase screen brightness
@@ -137,8 +139,44 @@ exec --no-startup-id xinput set-prop 12 277 1
 #   i3-gaps
 #=====================================================
 for_window [class="^.*"] border pixel 1
-gaps inner 20
+gaps inner 0
 gaps outer 0
+set $mode_gaps Gaps: (o) outer, (i) inner
+set $mode_gaps_outer Outer Gaps: +|-|0 (local), Shift + +|-|0 (global)
+set $mode_gaps_inner Inner Gaps: +|-|0 (local), Shift + +|-|0 (global)
+bindsym $mod+g mode "$mode_gaps"
+ 
+mode "$mode_gaps" {
+        bindsym o      mode "$mode_gaps_outer"
+        bindsym i      mode "$mode_gaps_inner"
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+ 
+mode "$mode_gaps_inner" {
+        bindsym plus  gaps inner current plus 5
+        bindsym minus gaps inner current minus 5
+        bindsym 0     gaps inner current set 0
+ 
+        bindsym Shift+plus  gaps inner all plus 5
+        bindsym Shift+minus gaps inner all minus 5
+        bindsym Shift+0     gaps inner all set 0
+ 
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+mode "$mode_gaps_outer" {
+        bindsym plus  gaps outer current plus 5
+        bindsym minus gaps outer current minus 5
+        bindsym 0     gaps outer current set 0
+ 
+        bindsym Shift+plus  gaps outer all plus 5
+        bindsym Shift+minus gaps outer all minus 5
+        bindsym Shift+0     gaps outer all set 0
+ 
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
 
 #=====================================================
 #   Startup settings
@@ -148,6 +186,8 @@ exec --no-startup-id $HOME/.config/i3/scripts/dualMonitor.sh
 exec_always --no-startup-id feh --bg-center /home/matt/.config/i3/wallpapers/DarkTriangles.jpg
 exec --no-startup-id compton --config ~/.config/compton/compton.conf -b
 exec --no-startup-i dunst
+
+bindsym $mod+shift+e exec /opt/enpass/Enpass showassistant
 
 # Place terminal in scratchpad on login
 exec --no-startup-id gnome-terminal -t scratchpad
@@ -162,7 +202,9 @@ for_window [title="scratchpad"] scratchpad show
 #=====================================================
 assign [class="Sublime_text"] → 1
 assign [class="jetbrains-studio"] → 1
+assign [class="Code"] → 1
 assign [class="robo3t"] → 3
 assign [class="Postman"] → 3
+assign [class="DBeaver"] → 3
 assign [class="Slack"] → 5
 assign [class="SmartGit"] → 6

@@ -3,13 +3,24 @@
 #================================#
 alias sa='source $HOME/dotfiles/bash/aliases'
 alias sb='source $HOME/dotfiles/bash/bashrc'
+alias sz='source $HOME/.zshrc'
 alias sshconfig='vim $HOME/.ssh/config'
 alias gitcs='vim $HOME/Documents/Notes/Git/CheatSheet.txt'
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+alias cb='xclip -selection c'
+alias rcpw='cat ~/.ssh/mmeyers.txt| cb'
+m () {
+	echo $1 | bc
+}
 
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
+
+alias cl='xdotool key Caps_Lock'
+alias CL='cl'
+
+alias t='vim ~/time.txt'
 
 #================================#
 #    Navigation
@@ -25,6 +36,7 @@ alias data='cd $HOME/Documents/Databases'
 alias dev='cd $HOME/Documents/Development'
 alias devt='cd $HOME/Documents/DevTools'
 alias notes='cd $HOME/Documents/Notes'
+alias scripts='cd $HOME/Documents/Scripts'
 alias dot='cd $HOME/dotfiles'
 alias drop='cd $HOME/Documents/Dropbox'
 alias ap='cd /etc/apache2'
@@ -57,3 +69,4 @@ alias p72='sudo a2dismod php5.6;sudo a2enmod php7.2;sudo systemctl restart apach
 #================================#
 alias py2='/usr/bin/python'
 alias py3='/usr/bin/python3'
+alias log='git log --graph --full-history --all --color --pretty=format:"%x1b[31m%h%x09%x1b[32m%d%x1b[0m%x20%s"'

@@ -10,13 +10,16 @@ export HISTCONTROL=ignoreboth
 export HISTTIMEFORMAT='%Y-%m-%dT%H:%M:%S  '
 export HISTSIZE=500
 export HISTFILESIZE=500
+shopt -s histverify
 
 # Setting PATH variable
 PYTHON_BIN_PATH="$(python3 -m site --user-base)/bin"
 FLUTTER_PATH="/home/matt/Documents/DevTools/flutter/bin"
-DART_PATH="/home/matt/Documents/DevTools/flutter/bin/cache/dart-sdk/bin"
-GO_PATH="/home/matt/Documents/DevTools/go/bin"
-export PATH="$PATH:$PYTHON_BIN_PATH:$FLUTTER_PATH:$DART_PATH:$GO_PATH"
+DART_PATH="/usr/lib/dart/bin"
+GO_PATH="/home/matt/Documents/Development/go/bin"
+GO_ROOT="/home/matt/Documents/DevTools/go/bin"
+PUB_CACHE_PATH="$HOME/.pub-cache/bin"
+export PATH="$PATH:$PYTHON_BIN_PATH:$DART_PATH:$FLUTTER_PATH:$GO_PATH:$GO_ROOT:$PUB_CACHE_PATH"
 
 # Setting Environment Variables
 export PS1="\[\033[38;5;2m\]\u@\h:[\[$(tput sgr0)\]\[\033[38;5;74m\]\w\[$(tput sgr0)\]\[\033[38;5;2m\]]\[$(tput sgr0)\]\[\033[38;5;15m\]\nΩ: \[$(tput sgr0)\]"
@@ -29,10 +32,10 @@ export ANDROID_HOME="/home/matt/Documents/DevTools/Android/Sdk"
 export NUTCH_HOME="/home/matt/Documents/DevTools/Nutch/apache-nutch-2.3.1"
 
 # Setting Go Paths
-export GOROOT="/home/matt/Documents/DevTools/go"
 GO_STAGING="/home/matt/Documents/DevTools/goStaging"
 GO_MCGSTRATEGIC="/home/matt/Documents/Development/MCGStrategic/go"
-export GOPATH="$GO_STAGING:$GO_MCGSTRATEGIC"
+export GOPATH="/home/matt/Documents/Development/go"
+export GO111MODULES="on"
 
 # Sourcing Files
 source ~/dotfiles/bash/aliases
