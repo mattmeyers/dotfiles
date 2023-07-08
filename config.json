@@ -1,0 +1,79 @@
+{
+    "zsh": { 
+        "files": [
+            {
+                "src": "./zsh/.zshrc",
+                "dst": "~/.zshrc"
+            }
+        ]
+    },
+    "tmux": { 
+        "files": [
+            {
+                "src": "./tmux/.tmux.conf",
+                "dst": "~/.tmux.conf"
+            }
+        ]
+    },
+    "git": {
+        "files": [
+            {
+                "src": "./git/.gitconfig",
+                "dst": "~/.gitconfig"
+            }
+        ]
+    },
+    "neovim": {
+        "files": [
+            {
+                "src": "./nvim/init.lua",
+                "dst": "~/.config/nvim/init.lua"
+            },
+            {
+                "src": "./nvim/lua/main/init.lua",
+                "dst": "~/.config/nvim/lua/main/init.lua"
+            },
+            {
+                "src": "./nvim/lua/main/packer.lua",
+                "dst": "~/.config/nvim/lua/main/packer.lua"
+            },
+            {
+                "src": "./nvim/lua/main/remap.lua",
+                "dst": "~/.config/nvim/lua/main/remap.lua"
+            },
+            {
+                "src": "./nvim/lua/main/set.lua",
+                "dst": "~/.config/nvim/lua/main/set.lua"
+            },
+            {
+                "src": "./nvim/after/plugin/colors.lua",
+                "dst": "~/.config/nvim/after/plugin/colors.lua"
+            },
+            {
+                "src": "./nvim/after/plugin/fugitive.lua",
+                "dst": "~/.config/nvim/after/plugin/fugitive.lua"
+            },
+            {
+                "src": "./nvim/after/plugin/harpoon.lua",
+                "dst": "~/.config/nvim/after/plugin/harpoon.lua"
+            },
+            {
+                "src": "./nvim/after/plugin/lsp.lua",
+                "dst": "~/.config/nvim/after/plugin/lsp.lua"
+            },
+            {
+                "src": "./nvim/after/plugin/telescope.lua",
+                "dst": "~/.config/nvim/after/plugin/telescope.lua"
+            },
+            {
+                "src": "./nvim/after/plugin/treesitter.lua",
+                "dst": "~/.config/nvim/after/plugin/treesitter.lua"
+            },
+            {
+                "src": "./nvim/after/plugin/undotree.lua",
+                "dst": "~/.config/nvim/after/plugin/undotree.lua"
+            }
+        ]
+    }
+}
+
