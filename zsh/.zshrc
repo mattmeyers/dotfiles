@@ -1,7 +1,7 @@
 # Always be in a tmux session named "main"
-if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
-  exec tmux new-session -A -s main
-fi
+# if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+#   exec tmux new-session -A -s main
+# fi
 
 # oh-my-zsh stuff
 export ZSH="/home/matt/.oh-my-zsh"
@@ -46,3 +46,5 @@ function mcd() {
     mkdir -p $1 && cd $1
 }
 
+
+if [ -e /home/matt/.nix-profile/etc/profile.d/nix.sh ]; then . /home/matt/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
