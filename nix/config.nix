@@ -15,6 +15,7 @@
 
         # Command line tools
         bat
+        exercism
         fzf
         git
         jq
