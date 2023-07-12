@@ -10,6 +10,6 @@
         i3
         i3status
         i3lock
-        compton
+        picom
     ]
 }
