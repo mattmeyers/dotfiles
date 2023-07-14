@@ -42,8 +42,12 @@
     "i3": {
         "files": [
             {
-                "src": "./i3/config",
+                "src": "./i3/i3.config",
                 "dst": "~/.config/i3/config"
+            },
+            {
+                "src": "./i3/i3status.config",
+                "dst": "~/.config/i3status/config"
             }
         ]
     }
