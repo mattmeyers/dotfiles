@@ -15,6 +15,7 @@
 
         # Command line tools
         bat
+        curl
         exercism
         fzf
         git
