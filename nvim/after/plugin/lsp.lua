@@ -1,6 +1,22 @@
-local lsp = require('lsp-zero')
+local lsp = require('lsp-zero').preset({
+    float_border = 'rounded',
+    call_servers = 'local',
+    configure_diagnostics = true,
+    setup_servers_on_start = true,
+    set_lsp_keymaps = {
+        preserve_mappings = false,
+        omit = { 'gl' },
+    },
+    manage_nvim_cmp = {
+        set_sources = 'recommended',
+        set_basic_mappings = true,
+        set_extra_mappings = true,
+        use_luasnip = true,
+        set_format = true,
+        documentation_window = true,
+    },
+})
 
-lsp.preset('recommended')
 
 lsp.configure('lua_ls', {
     settings = {
@@ -32,3 +48,12 @@ lsp.on_attach(function(client, bufnr)
 end)
 
 lsp.setup()
+
+local cmp = require('cmp')
+
+cmp.setup({
+    mapping = {
+        ['<CR>'] = cmp.mapping.confirm({ select = false }),
+        ['<C-x>'] = cmp.mapping.complete(),
+    }
+})
