@@ -9,7 +9,7 @@ export ZSH="/nix/store/bzapw0766h055mic0f0ja3gcp17hl9v0-oh-my-zsh-2023-06-26/sha
 zstyle ':omz:update' frequency 13
 ZSH_THEME="robbyrussell"
 CASE_SENSITIVE="true"
-plugins=(git)
+plugins=(git ssh-agent)
 source $ZSH/oh-my-zsh.sh
 
 # Preferred editor for local and remote sessions
