@@ -1,8 +1,12 @@
 [user]
 	email = matt@mattmeyers.dev
 	name = Matt Meyers
+
 [core]
 	editor = nvim
+
+[init]
+    defaultBranch = main
 
 [alias]
     a = add
