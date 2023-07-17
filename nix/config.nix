@@ -20,6 +20,7 @@
         fzf
         git
         jq
+        just
         ripgrep
 
         # Programming languages
