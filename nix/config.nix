@@ -30,7 +30,7 @@
         # GUI programs
         dbeaver
       ];
-      pathsToLink = ["/share/man" "/share/doc" "/bin"];
+      pathsToLink = ["/share" "/bin"];
       extraOutputsToInstall = ["man" "doc"];
     };
   };

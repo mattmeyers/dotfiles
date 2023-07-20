@@ -12,6 +12,9 @@ CASE_SENSITIVE="true"
 plugins=(git ssh-agent)
 source $ZSH/oh-my-zsh.sh
 
+source ~/.nix-profile/share/fzf/key-bindings.zsh
+source ~/.nix-profile/share/fzf/completion.zsh
+
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
