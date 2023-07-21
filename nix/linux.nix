@@ -7,9 +7,8 @@
      * NixOS, these can get included.
      */
     paths = [
-        i3
-        i3status
-        i3lock
-        picom
+        sway
+        swayidle
+        wl-clipboard
     ]
 }

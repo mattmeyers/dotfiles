@@ -50,6 +50,18 @@
                 "dst": "~/.config/i3status/config"
             }
         ]
+    },
+    "sway": {
+        "files": [
+            {
+                "src": "./sway/config",
+                "dst": "~/.config/sway/config"
+            },
+            {
+                "src": "./sway/status.sh",
+                "dst": "~/.config/sway/status.sh"
+            }
+        ]
     }
 }
 
