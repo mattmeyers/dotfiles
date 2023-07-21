@@ -31,11 +31,9 @@ alias scratch="scratch --editor=vim"
 alias g="git"
 alias alacritty="nixGL alacritty"
 
-# source /home/matt/code/github.com/zsh-git-prompt/zsh-git-prompt/zshrc.sh
-
-export PATH="/home/matt/.local/bin:$PATH"
-export PATH="$PATH:/home/matt/go/bin"
-export PATH="$PATH:/home/matt/.luarocks/bin"
+export PATH="$HOME/.local/bin:$PATH"
+export PATH="$PATH:$HOME/go/bin"
+export PATH="$PATH:$HOME/.luarocks/bin"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
