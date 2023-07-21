@@ -22,4 +22,4 @@ $ nix-channel --update
 $ nix-env -iA nixgl.auto.nixGLDefault
 ```
 
-1: https://github.com/guibou/nixGL
+[1]: https://github.com/guibou/nixGL
