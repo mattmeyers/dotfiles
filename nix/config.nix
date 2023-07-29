@@ -25,6 +25,7 @@
 
         # Programming languages
         go
+        nodejs_20
         python312
 
         # GUI programs
