@@ -26,7 +26,8 @@
         # Programming languages
         go
         nodejs_20
-        python312
+        poetry
+        python311
 
         # GUI programs
         dbeaver
