@@ -1,7 +1,7 @@
 vim.keymap.set("n", "<leader>ft", vim.cmd.Ex)
 
-vim.keymap.set("n", "gh", "^")
-vim.keymap.set("n", "gl", "$")
+vim.keymap.set({ "n", "v" }, "gh", "^")
+vim.keymap.set({ "n", "v" }, "gl", "$")
 
 vim.keymap.set("n", "Q", "<nop>")
 
