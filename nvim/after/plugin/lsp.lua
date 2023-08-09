@@ -28,6 +28,8 @@ lsp.configure('lua_ls', {
     }
 })
 
+lsp.configure('nim_langserver', {})
+
 lsp.on_attach(function(client, bufnr)
 	local opts = {buffer = bufnr, remap = false}
 
