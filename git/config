@@ -1,9 +1,5 @@
-[user]
-	email = matt@mattmeyers.dev
-	name = Matt Meyers
-
 [core]
-	editor = nvim
+    editor = nvim
 
 [init]
     defaultBranch = main
@@ -18,3 +14,6 @@
     wtl = worktree list
     wta = worktree add
     wtr = worktree remove
+
+[include]
+    path = ~/.config/git/config.profile

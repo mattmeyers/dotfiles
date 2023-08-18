@@ -1,55 +1,66 @@
 {
-    "zsh": { 
-        "files": [
-            {
-                "src": "./zsh/.zshrc",
-                "dst": "~/.zshrc"
-            }
-        ]
+  "default": {
+    "zsh": {
+      "files": [
+        {
+          "src": "./zsh/.zshrc",
+          "dst": "~/.zshrc"
+        }
+      ]
     },
-    "tmux": { 
-        "files": [
-            {
-                "src": "./tmux/.tmux.conf",
-                "dst": "~/.tmux.conf"
-            }
-        ]
+    "tmux": {
+      "files": [
+        {
+          "src": "./tmux/.tmux.conf",
+          "dst": "~/.tmux.conf"
+        }
+      ]
     },
     "git": {
-        "files": [
-            {
-                "src": "./git/.gitconfig",
-                "dst": "~/.gitconfig"
-            }
-        ]
+      "files": [
+        {
+          "src": "./git/config",
+          "dst": "~/.config/git/config"
+        }
+      ]
     },
     "neovim": {
-        "files": [
-            {
-                "src": "./nvim",
-                "dst": "~/.config/nvim"
-            }
-        ]
+      "files": [
+        {
+          "src": "./nvim",
+          "dst": "~/.config/nvim"
+        }
+      ]
     },
     "nix": {
-        "files": [
-            {
-                "src": "./nix/config.nix",
-                "dst": "~/.config/nixpkgs/config.nix"
-            }
-        ]
+      "files": [
+        {
+          "src": "./nix/config.nix",
+          "dst": "~/.config/nixpkgs/config.nix"
+        }
+      ]
+    }
+  },
+  "personal": {
+    "git": {
+      "files": [
+        {
+          "src": "./git/config.personal",
+          "dst": "~/.config/git/config.profile"
+        }
+      ]
     },
     "sway": {
-        "files": [
-            {
-                "src": "./sway/config",
-                "dst": "~/.config/sway/config"
-            },
-            {
-                "src": "./sway/status.sh",
-                "dst": "~/.config/sway/status.sh"
-            }
-        ]
+      "files": [
+        {
+          "src": "./sway/config",
+          "dst": "~/.config/sway/config"
+        },
+        {
+          "src": "./sway/status.sh",
+          "dst": "~/.config/sway/status.sh"
+        }
+      ]
     }
+  }
 }
-
