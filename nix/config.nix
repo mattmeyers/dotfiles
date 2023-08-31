@@ -24,7 +24,7 @@
         ripgrep
 
         # Programming languages
-        go
+        go_1_21
         nodejs_20
         poetry
         python311
