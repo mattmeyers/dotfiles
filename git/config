@@ -8,6 +8,8 @@
     a = add
     c = commit
     s = status
+    b = branch
+    bc = branch --show-current
     p = pull
     co = checkout
     us = restore --staged
