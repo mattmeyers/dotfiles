@@ -31,14 +31,6 @@
           "dst": "~/.config/nvim"
         }
       ]
-    },
-    "nix": {
-      "files": [
-        {
-          "src": "./nix/config.nix",
-          "dst": "~/.config/nixpkgs/config.nix"
-        }
-      ]
     }
   },
   "personal": {
@@ -47,18 +39,6 @@
         {
           "src": "./git/config.personal",
           "dst": "~/.config/git/config.profile"
-        }
-      ]
-    },
-    "sway": {
-      "files": [
-        {
-          "src": "./sway/config",
-          "dst": "~/.config/sway/config"
-        },
-        {
-          "src": "./sway/status.sh",
-          "dst": "~/.config/sway/status.sh"
         }
       ]
     }
