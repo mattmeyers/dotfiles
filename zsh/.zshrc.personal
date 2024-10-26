@@ -1,0 +1,5 @@
+function omnetpp() {
+    source ~/.local/share/omnetpp-6.0.3/setenv
+    GTK_THEME=Adwaita:light ~/.local/share/omnetpp-6.0.3/bin/omnetpp
+}
+

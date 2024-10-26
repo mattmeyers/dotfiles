@@ -41,6 +41,14 @@
           "dst": "~/.config/git/config.profile"
         }
       ]
+    },
+    "zsh": {
+      "files": [
+        {
+          "src": "./zsh/.zshrc.personal",
+          "dst": "~/.zshrc.profile"
+        }
+      ]
     }
   }
 }
