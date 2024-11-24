@@ -35,6 +35,8 @@ alias .....='cd ../../../..'
 alias vim="nvim"
 alias v="vim"
 alias g="git"
+alias cbc="xclip -selection clipboard -i"
+alias cbp="xclip -selection clipboard -o"
 
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$PATH:/opt/nvim-linux64/bin"
