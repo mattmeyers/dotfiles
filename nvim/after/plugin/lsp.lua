@@ -36,25 +36,6 @@ lspconfig.intelephense.setup({
     end,
 })
 
-local vue_language_server_path = require('mason-registry')
-    .get_package('vue-language-server'):get_install_path()
-    .. '/node_modules/@vue/language-server'
-
-lspconfig.ts_ls.setup {
-    init_options = {
-        plugins = {
-            {
-                name = '@vue/typescript-plugin',
-                location = vue_language_server_path,
-                languages = { 'vue' },
-            },
-        },
-    },
-    filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue' },
-}
-
-lspconfig.volar.setup {}
-
 lsp.on_attach(function(client, bufnr)
     local opts = { buffer = bufnr, remap = false }
 
