@@ -28,12 +28,37 @@ lsp.configure('lua_ls', {
     }
 })
 
-lsp.configure('nim_langserver', {})
+local lspconfig = require('lspconfig')
+
+lspconfig.intelephense.setup({
+    root_dir = function()
+        return vim.loop.cwd()
+    end,
+})
+
+local vue_language_server_path = require('mason-registry')
+    .get_package('vue-language-server'):get_install_path()
+    .. '/node_modules/@vue/language-server'
+
+lspconfig.ts_ls.setup {
+    init_options = {
+        plugins = {
+            {
+                name = '@vue/typescript-plugin',
+                location = vue_language_server_path,
+                languages = { 'vue' },
+            },
+        },
+    },
+    filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue' },
+}
+
+lspconfig.volar.setup {}
 
 lsp.on_attach(function(client, bufnr)
-	local opts = {buffer = bufnr, remap = false}
+    local opts = { buffer = bufnr, remap = false }
 
-	vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)
+    vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)
     vim.keymap.set("n", "gi", function() vim.lsp.buf.implementation() end, opts)
     vim.keymap.set("n", "gr", function() vim.lsp.buf.references() end, opts)
 
