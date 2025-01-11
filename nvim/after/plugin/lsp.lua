@@ -28,12 +28,10 @@ lsp.configure('lua_ls', {
     }
 })
 
-local lspconfig = require('lspconfig')
-
-lspconfig.intelephense.setup({
-    root_dir = function()
-        return vim.loop.cwd()
-    end,
+lsp.configure('intelephense', {
+    settings = {
+        root_dir = vim.loop.cwd()
+    }
 })
 
 lsp.on_attach(function(client, bufnr)
