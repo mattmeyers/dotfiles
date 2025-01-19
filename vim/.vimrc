@@ -10,26 +10,20 @@ filetype indent on
 set ttimeoutlen=100
 
 " Don't bother with backing up files
-set nobackup
-set nowb
-set noswapfile
+set nobackup nowb noswapfile
 
 "-----------"
 " UI Config "
 "-----------"
-set number
-set relativenumber
-set ruler
+set number relativenumber ruler
 set scrolloff=8
 set nowrap
 
 set wildmenu
 
 " Search settings
-set ignorecase
-set smartcase
-set nohlsearch
-set incsearch
+set ignorecase smartcase
+set nohlsearch incsearch
 set magic
 
 " Don't redraw while executing macros (good performance config)
@@ -39,8 +33,7 @@ set lazyredraw
 set showmatch
 
 " No annoying sound on errors
-set noerrorbells
-set novisualbell
+set noerrorbells novisualbell
 set t_vb=
 set tm=500
 
@@ -49,16 +42,10 @@ let g:netrw_banner=0
 "--------------------"
 " Tabs and Indenting "
 "--------------------"
-set smarttab
-set expandtab
-
 " 1 tab == 4 spaces
-set shiftwidth=4
-set softtabstop=4
-set tabstop=4
-
-set autoindent
-set smartindent
+set shiftwidth=4 softtabstop=4 tabstop=4
+set smarttab expandtab
+set autoindent smartindent
 
 "----------------"
 " Key Remappings "
