@@ -31,6 +31,14 @@
           "dst": "~/.config/nvim"
         }
       ]
+    },
+    "vim": {
+        "files": [
+            {
+                "src": "./vim/.vimrc",
+                "dst": "~/.vimrc"
+            }
+        ]
     }
   },
   "personal": {
