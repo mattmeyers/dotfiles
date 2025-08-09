@@ -17,5 +17,12 @@
     wta = worktree add
     wtr = worktree remove
 
+[push]
+  autoSetupRemote = true
+
+[help]
+  autocorrect = prompt
+
 [include]
     path = ~/.config/git/config.profile
+
