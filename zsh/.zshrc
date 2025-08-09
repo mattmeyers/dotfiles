@@ -23,6 +23,7 @@ setopt EXTENDED_HISTORY  # record command start time
 autoload -U compinit promptinit
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|=*' 'l:|=* r:|=*'
 zstyle ':completion:*' menu select
+compinit
 
 export PROMPT="%F{green}%n@%M [%F{75}%~%F{green}]
 %(?:%F{green}λ:%F{red}λ)%F{white}: "
@@ -47,9 +48,8 @@ function mcd() {
 
 [ -f "${XDG_CONFIG_HOME:-$HOME/.config}"/fzf/fzf.zsh ] && source "${XDG_CONFIG_HOME:-$HOME/.config}"/fzf/fzf.zsh
 
-. "$HOME/.asdf/asdf.sh"
+export PATH="/home/matt/.local/share/mise/shims:$PATH"
 
 if [ -e "$HOME/.zshrc.profile" ]; then
     source "$HOME/.zshrc.profile"
 fi
-
