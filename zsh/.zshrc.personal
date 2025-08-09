@@ -1,1 +1,3 @@
-
+export GOPRIVATE=gitlab.com/ninthrealm/*
+export GONOPROXY=gitlab.com/ninthrealm/*
+export GONOSUMDB=gitlab.com/ninthrealm/*
