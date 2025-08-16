@@ -58,6 +58,16 @@ lsp.setup()
 local cmp = require('cmp')
 
 cmp.setup({
+	-- sources = {
+	-- 	{
+	-- 		name = "buffer",
+	-- 		option = {
+	-- 			get_bufnrs = function()
+	-- 				return { vim.api.nvim_get_current_buf() }
+	-- 			end,
+	-- 		},
+	-- 	},
+	-- },
     mapping = {
         ['<CR>'] = cmp.mapping.confirm({ select = false }),
         ['<C-x>'] = cmp.mapping.complete(),

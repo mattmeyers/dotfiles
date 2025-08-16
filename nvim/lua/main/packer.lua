@@ -48,25 +48,24 @@ return require('packer').startup(function(use)
         branch = 'v2.x',
         requires = {
             -- LSP Support
-            { 'neovim/nvim-lspconfig' },
+            { 'neovim/nvim-lspconfig', commit = 'b0caeef' },
             {
                 'williamboman/mason.nvim',
+                commit = '7dc4facc',
                 run = function()
                     pcall(vim.cmd, 'MasonUpdate')
                 end,
             },
-            { 'williamboman/mason-lspconfig.nvim' },
+            { 'williamboman/mason-lspconfig.nvim', commit = '7f0bf63' },
 
             -- Autocompletion
-            { 'hrsh7th/nvim-cmp' },
-            { 'hrsh7th/cmp-nvim-lsp' },
-            { 'L3MON4D3/LuaSnip' },
+            { 'hrsh7th/nvim-cmp', commit = 'b5311ab' },
+            { 'hrsh7th/cmp-nvim-lsp', commit = 'a8912b8' },
         },
     }
 
     use {
-        "windwp/nvim-autopairs",
-        commit = 'ee297f2',
-        config = function() require("nvim-autopairs").setup {} end,
+        "stevearc/conform.nvim",
+        tag = 'v9.0.0',
     }
 end)
