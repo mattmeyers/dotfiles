@@ -10,12 +10,7 @@ return require('packer').startup(function(use)
         commit = 'ea0cc3c',
     }
 
-    use {
-        'nvim-telescope/telescope.nvim',
-        tag = '0.1.8',
-        requires = { { 'nvim-lua/plenary.nvim' } },
-    }
-
+    -- Theming
     use {
         'rose-pine/neovim',
         as = 'rose-pine',
@@ -23,49 +18,29 @@ return require('packer').startup(function(use)
         config = function() vim.cmd('colorscheme rose-pine') end,
     }
 
+    -- Navigation
+    use { 'theprimeagen/harpoon', commit = '1bc17e3' }
+    use { 'nvim-treesitter/nvim-treesitter', tag = 'v0.9.3' }
     use {
-        'nvim-treesitter/nvim-treesitter',
-        tag = 'v0.9.3',
-    }
-
-    use {
-        'theprimeagen/harpoon',
-        commit = '1bc17e3',
-    }
-
-    use {
-        'mbbill/undotree',
-        tag = 'rel_6.1',
-    }
-
-    use {
-        'tpope/vim-commentary',
-        commit = '64a654e',
-    }
-
-    use {
-        'VonHeikemen/lsp-zero.nvim',
-        branch = 'v2.x',
+        'nvim-telescope/telescope.nvim',
+        tag = '0.1.8',
         requires = {
-            -- LSP Support
-            { 'neovim/nvim-lspconfig', commit = 'b0caeef' },
-            {
-                'williamboman/mason.nvim',
-                commit = '7dc4facc',
-                run = function()
-                    pcall(vim.cmd, 'MasonUpdate')
-                end,
-            },
-            { 'williamboman/mason-lspconfig.nvim', commit = '7f0bf63' },
-
-            -- Autocompletion
-            { 'hrsh7th/nvim-cmp', commit = 'b5311ab' },
-            { 'hrsh7th/cmp-nvim-lsp', commit = 'a8912b8' },
+            { 'nvim-lua/plenary.nvim', commit = 'b9fd522' },
         },
     }
 
-    use {
-        "stevearc/conform.nvim",
-        tag = 'v9.0.0',
-    }
+    -- LSP Support
+    use { 'neovim/nvim-lspconfig', tag = 'v2.4.0' }
+    use { 'mason-org/mason.nvim', tag = 'v2.0.1' }
+    use { 'mason-org/mason-lspconfig.nvim', tag = 'v2.1.0' }
+    use { "stevearc/conform.nvim", tag = 'v9.0.0' }
+
+    -- Autocompletion
+    use { 'hrsh7th/nvim-cmp', commit = 'b5311ab' }
+    use { 'hrsh7th/cmp-nvim-lsp', commit = 'a8912b8' }
+    use { "L3MON4D3/LuaSnip", tag = "v2.4.0" }
+
+    -- Utilities
+    use { 'mbbill/undotree', tag = 'rel_6.1' }
+    use { 'tpope/vim-commentary', commit = '64a654e' }
 end)
