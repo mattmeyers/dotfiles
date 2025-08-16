@@ -19,14 +19,15 @@ return require('packer').startup(function(use)
     }
 
     -- Navigation
-    use { 'theprimeagen/harpoon', commit = '1bc17e3' }
-    use { 'nvim-treesitter/nvim-treesitter', tag = 'v0.9.3' }
+    use { 'nvim-treesitter/nvim-treesitter', tag = 'v0.10.0' }
+    use { "ThePrimeagen/harpoon",
+        branch = "harpoon2",
+        requires = { { "nvim-lua/plenary.nvim" } },
+    }
     use {
         'nvim-telescope/telescope.nvim',
         tag = '0.1.8',
-        requires = {
-            { 'nvim-lua/plenary.nvim', commit = 'b9fd522' },
-        },
+        requires = { { 'nvim-lua/plenary.nvim' } },
     }
 
     -- LSP Support
@@ -42,5 +43,5 @@ return require('packer').startup(function(use)
 
     -- Utilities
     use { 'mbbill/undotree', tag = 'rel_6.1' }
-    use { 'tpope/vim-commentary', commit = '64a654e' }
+    use { 'nvim-lua/plenary.nvim', commit = 'b9fd522' }
 end)
